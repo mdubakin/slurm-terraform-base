@@ -1,0 +1,14 @@
+#cloud-config
+ssh_pwauth: false
+
+users:
+  - name: student
+    groups: sudo
+    shell: /bin/bash
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+    ssh-authorized-keys:
+      - ${pubkey}
+
+runcmd:
+  - apt-get update
+  - apt-get install -y nginx
