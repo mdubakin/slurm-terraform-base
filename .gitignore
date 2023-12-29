@@ -5,5 +5,7 @@
 .envrc
 terraform.tfstate
 terraform.tfstate.backup
+terraform.tfvars
 id_rsa
 lecture
+vars.pkrvars.hcl
